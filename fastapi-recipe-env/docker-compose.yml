@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-db
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPassword123
+    ports:
+      - "1433:1433"
+
+  api:
+    build: .
+    container_name: fastapi-recipe-api
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=mssql+pyodbc://sa:YourPassword123@db:1433/recipe_db?driver=ODBC+Driver+17+for+SQL+Server
+

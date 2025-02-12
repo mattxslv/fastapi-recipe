@@ -1,4 +1,4 @@
-```
+
 # FastAPI Recipe App Setup Guide
 
 ## Step 1: Set Up the Environment

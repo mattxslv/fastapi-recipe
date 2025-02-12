@@ -13,7 +13,7 @@ Ensure you have Python and Docker installed on your system:
 
 ## Step 2: Set Up FastAPI Project
 
-1. Clone the repository (assuming your project is on GitHub):
+1. Clone the repository:
    ```
    git clone https://github.com/yourusername/fastapi-recipe.git
    cd fastapi-recipe
